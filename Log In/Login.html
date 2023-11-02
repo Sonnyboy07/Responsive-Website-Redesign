@@ -10,7 +10,7 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
     <title>Responsive Website Redesign</title>
     
    <!-- SET UP A NAVBAR SECTION -->
@@ -41,53 +41,21 @@
                 <li><a href="login">Log In</a></li>
                 <li><a href="" class="action_btn">Get Started</a></li>
             </ul>
-
         </div>
+
+        <main>
+            <h2 class="body-title text-center">GET IN TOUCH!</h2>
+            <p class="body-text text-center">We’ll get in touch with you as quickly as possible.</p>
+    
+            <form class="d-flex justify-content-center flex-column">
+                <input class="form-text container" type="text" placeholder="First Name">
+                <input class="form-text container mt-3" type="text" placeholder="Last Name">
+                <input class="form-text container mt-3" type="text" placeholder="Phone Number">
+                <input class="form-text container mt-3" type="text" placeholder="Email">
+                <textarea class="form-text container mt-3" cols="30" rows="10" placeholder="Comments or Message"></textarea>
+                <button class="form-btn container mt-3 mb-5">SUBMIT</button>
+            </form>
+        </main>
 </header>
-
-<!-- HOME PAGE SECTION -->
-    <section class="home" id="home">
-        <div class="home-text">
-            <h2>Who Would You Share A Minute Burger with?🍔 </h2>
-            <a href="#" class="btn">Today's Menu</a>
-        </div>
-                <div class="slider-frame">
-                    <div class="slide-images">
-
-                        <div class="img-container">
-                            <img src="foods2.png">
-                        </div>
-
-                        <div class="img-container">
-                            <img src="foods1.png">
-                        </div>
-
-                        <div class="img-container">
-                            <img src="foods3.png">
-                        </div>
-                    </div>
-                </div>
-    </section>
-
-    
-  
-    
-
-
-<script>
-    const toggleBtn = document.querySelector('.toggle_btn')
-    const toggleBtnIcon = document.querySelector('.toggle_btn i')
-    const dropDownMenu = document.querySelector('.dropdown_menu')
-
-    toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
-
-        toggleBtnIcon.classList = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'
-    }
-</script>
-<footer><i>Copyright 2023 Minute Burger Go! All Rights Reserved.</i></footer>
 </body>
 </html>

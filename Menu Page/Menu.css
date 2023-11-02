@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    height: 100vh;
+    background-color: navajowhite;
+    background-size: cover;
+    background-position: center;
+}
+
+/* NAVBAR */
+li {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+a:hover {
+    color: orange;
+}
+
+/* HEADER */
+header {
+    position: relative;
+    padding:  0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar .logo a {
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    margin-right: 100px;
+    
+
+}
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: orange;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color:#000000
+}
+
+.action_btn:active {
+    scale: 0.95;
+    
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(141, 127, 127, 0.644);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.dropdown_menu.open {
+    height: 240px;
+
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media(max-width: 776px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* HOME SECTION */
+section {
+    padding: 30px 15%;
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: 800px;
+    width: 900px;
+    margin-left: 360px;
+    margin-top: 20px;
+}
+
+/* SLIDE ANIMATION */
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:1200px;}
+    60% {left:1200px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+
+.slide-images {
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2450px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+.img-container {
+    height: 900vh;
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+    float: right;
+
+}
+
+
+
+.home {
+    width: 100%;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+
+.home-text h2 {
+    font-size:50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    background:navajowhite;
+    width: 420px;
+    margin-bottom: 10px;
+   
+    
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(141, 127, 127, 0.644);
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    transform: scale(1.2) translateY(10px);
+    transition: .4s;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+}
+
+.heading h2 {
+    font-size: 50px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(520px, auto));
+    grid-gap: 1.5rem;
+    align-items: center;
+}
+
+.box h3{
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+}
+.box h2{
+    font-size: large;
+}
